@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(233, 53, 203);
+    font-family: 'Dancing Script', cursive;
+}
+
+.contenedor{
+/*    background-color: rgb(255, 255, 255);*/
+    background-color: rgb(212, 105, 33);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "encabezado        encabezado"
+                         "portada              portada"
+                         "form              contacto"
+                         "pie               pie";
+}
+
+.encabezado{
+    background-color: rgba(5, 5, 5, .5);
+    grid-area: encabezado;
+}
+
+.encabezado .logo{
+    display: flex;
+    padding-left: 5%;
+}
+
+
+.portada{
+    grid-area: portada;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(212, 105, 33);
+}
+
+.portada .info{
+    background-color: rgb(212, 105, 33);
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.portada .parrafo{
+    background-color: rgba(255, 255, 255, .3);
+    padding-top: 10%;
+    padding-bottom: 7%;
+    border-top-left-radius: 35%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 7%;
+    padding-right: 3%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.portada .imagen img{
+    border-radius: 20%;
+}
+
+.form{
+    background-color: rgba(0, 0, 0, .4);
+    height: 450px;
+    grid-area: form;
+    grid-gap: 0px;
+    width: 450px;
+    margin:auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+.form h2{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: monospace;
+}
+
+.form input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+.form textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.form .boton{
+    background-color: #31384A;
+    color: #fff;
+    padding: 20px;
+}
+
+.form .boton:hover{
+    cursor: pointer;
+}
+
+
+.contacto{
+    background-color: blueviolet;
+    grid-gap: 0px;
+}
+
+.pie{
+    background-color: brown;
+    height: 100px;
+    grid-area: pie;
+}
+
+.gracias{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+@media (max-width:480px){
+    .form{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
